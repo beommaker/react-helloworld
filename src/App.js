@@ -6,16 +6,38 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>
+          I love you, {formatName(user)}
+        </h1>
+        {getGreeting(user)}
+        {getGreeting()}
       </div>
     );
   }
 }
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Daji',
+  lastName: 'Lee',
+};
+
+function getGreeting(user) {
+  if (user) {
+    return <h1>I love you, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger</h1>;
+}
+
+const element = {
+  type: 'h1',
+  props: {
+    className: 'greeting',
+    children: 'Hello, world'
+  }
+};
 
 export default App;
