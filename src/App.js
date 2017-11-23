@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Clock from './Clock'
+import Toggle from './Toggle'
 
 class App extends Component {
   render() {
@@ -8,13 +9,10 @@ class App extends Component {
       <div className="APP">
         <div className="Welcome">
           <Welcome name="Daji" />
-          <Welcome name="Beom" />
-          <Welcome name="Sam" />
         </div>
         <div className="Clock">
           <Clock />
-          <Clock />
-          <Clock />
+          <Toggle />
         </div>
       </div>
     );
