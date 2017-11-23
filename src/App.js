@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import Clock from './Clock'
 
 class App extends Component {
   render() {
     return (
       <div className="APP">
-        <Welcome name="Daji" />
-        <Welcome name="Beom" />
-        <Welcome name="Sam" />
+        <div className="Welcome">
+          <Welcome name="Daji" />
+          <Welcome name="Beom" />
+          <Welcome name="Sam" />
+        </div>
+        <div className="Clock">
+          <Clock />
+          <Clock />
+          <Clock />
+        </div>
       </div>
     );
   }
